@@ -1,4 +1,5 @@
-# Shopping Cart Example
+# Shopping Cart Example ([Live Demo](https://anandmv.github.io/react-cart/))
+<img src="https://github.com/anandmv/react-cart/blob/master/screens/screen.png"/>
 
 This project template was built with [Create React App](https://github.com/facebookincubator/create-react-app), which provides a simple way to start React projects with no build configuration needed.
 
