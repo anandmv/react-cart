@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Produt Name 1",
+    "brand": "Brand1",
+    "image": "http://lorempixel.com/250/200/food/",
+    "details": "Details Text 1",
+    "price": 10,
+    "currency": "Rs",
+    "inventory": 2
+  },
+  {
+    "id": 2,
+    "name": "Produt Name 2",
+    "brand": "Brand2",
+    "image": "http://lorempixel.com/250/200/food/",
+    "details": "Details Text 2",
+    "price": 20,
+    "currency": "Rs",
+    "inventory": 4
+  },
+  {
+    "id": 3,
+    "name": "Produt Name 3",
+    "brand": "Brand3",
+    "image": "http://lorempixel.com/250/200/food/",
+    "details": "Details Text 3",
+    "price": 30,
+    "currency": "Rs",
+    "inventory": 6
+  },
+  {
+    "id": 4,
+    "name": "Produt Name 4",
+    "brand": "Brand4",
+    "image": "http://lorempixel.com/250/200/food/",
+    "details": "Details Text 4",
+    "price": 40,
+    "currency": "Rs",
+    "inventory": 8
+  }
+]
