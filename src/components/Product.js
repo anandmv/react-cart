@@ -5,12 +5,10 @@ const Product = ({ inventory, name, brand, price, currency, details }) => (
   <div>
     <p>{brand}</p>
     <h4>{name}</h4>
+    <p>{details}</p>
     <p>
-      <div>{details}</div>
-      <b>
-        {currency} {price}
-      </b>
-      {inventory ? `(Stock Left : ${inventory})` : null}
+      <b>{currency} {price}</b>
+      {inventory ? `  (Stock Left : ${inventory})` : null}
     </p>
   </div>
 );

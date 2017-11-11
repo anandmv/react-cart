@@ -38,5 +38,15 @@
     "price": 40,
     "currency": "Rs",
     "inventory": 8
+  },
+  {
+    "id": 5,
+    "name": "Produt Name 5",
+    "brand": "Brand5",
+    "image": "http://lorempixel.com/250/200/food/",
+    "details": "Details Text 5",
+    "price": 50,
+    "currency": "Rs",
+    "inventory": 10
   }
 ]

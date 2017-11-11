@@ -13,12 +13,21 @@ if (process.env.NODE_ENV !== 'production') {
   middleware.push(createLogger());
 }
 
+const persistedState = localStorage.getItem("reduxState")
+  ? JSON.parse(localStorage.getItem("reduxState"))
+  : {};
+
 const store = createStore(
   reducer,
+  persistedState,
   applyMiddleware(...middleware)
 )
 
 store.dispatch(getAllProducts())
+
+store.subscribe(() => {
+  localStorage.setItem("reduxState", JSON.stringify(store.getState()));
+});
 
 render(
   <Provider store={store}>

@@ -1,38 +1,45 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { addToCart } from '../actions'
-import { getVisibleProducts } from '../reducers/products'
+import { addToCart, changeQuanityCart } from "../actions";
+import { getVisibleProducts } from '../reducers/products';
 import ProductItem from '../components/ProductItem'
 import ProductsList from '../components/ProductsList'
 
-const ProductsContainer = ({ products, addToCart }) => (
+const ProductsContainer = ({
+  products,
+  addToCart,
+  changeQuanityCart
+}) => (
   <ProductsList title="Products">
-      {products.map(product => (
-        <div
-          className="col-6 col-lg-4"
-          style={{
-            padding: 10
-          }}
-        >
-          <ProductItem
-            key={product.id}
-            product={product}
-            onAddToCartClicked={() => addToCart(product.id)}
-          />
-        </div>
-      ))}
+    {products.map((product, key) => (
+      <div
+        className="col-6 col-lg-4"
+        style={{
+          padding: 10
+        }}
+        key={key}
+      >
+        <ProductItem
+          key={product.id}
+          product={product}
+          onAddToCartClicked={() => addToCart(product.id)}
+          onChangeQuanitytClicked={() => changeQuanityCart(product.id)}
+        />
+      </div>
+    ))}
   </ProductsList>
 );
 
 ProductsContainer.propTypes = {
   products: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,
-    title: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
     inventory: PropTypes.number.isRequired
   })).isRequired,
-  addToCart: PropTypes.func.isRequired
+  addToCart: PropTypes.func.isRequired,
+  changeQuanityCart: PropTypes.func.isRequired
 }
 
 const mapStateToProps = state => ({
@@ -41,5 +48,7 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { addToCart }
+  {
+    addToCart, changeQuanityCart
+  }
 )(ProductsContainer)

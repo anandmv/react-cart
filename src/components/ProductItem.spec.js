@@ -25,7 +25,7 @@ let productProps
 describe('ProductItem component', () => {
   beforeEach(() => {
     productProps = {
-      title: 'Product 1',
+      name: 'Product 1',
       price: 9.99,
       inventory: 6
     }
@@ -33,7 +33,7 @@ describe('ProductItem component', () => {
 
   it('should render product', () => {
     const { product } = setup(productProps)
-    expect(product.props()).toEqual({ title: 'Product 1', price: 9.99, inventory: 6 })
+    expect(product.props()).toEqual({ name: 'Product 1', price: 9.99, inventory: 6 })
   })
 
   it('should render Add To Cart message', () => {
