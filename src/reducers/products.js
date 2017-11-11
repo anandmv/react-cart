@@ -2,7 +2,9 @@ import { combineReducers } from 'redux'
 import {
   RECEIVE_PRODUCTS,
   ADD_TO_CART,
-  CHANGE_QUANTITY} from "../constants/ActionTypes";
+  CHANGE_QUANTITY,
+  REMOVE_PRODUCT
+} from "../constants/ActionTypes";
 
 const products = (state, action) => {
   switch (action.type) {
@@ -10,6 +12,8 @@ const products = (state, action) => {
       return { ...state, quantity: state.quantity + 1 };
     case CHANGE_QUANTITY:
       return { ...state, quantity: state.quantity - 1 };
+    case REMOVE_PRODUCT:
+      return { ...state, quantity: 0 };
     default:
       return state;
   }
